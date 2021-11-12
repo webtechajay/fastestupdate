@@ -21,10 +21,10 @@
     <div class="container">
     	
        
-      
+        @if(isset($showBlogs))
 
         <div class="row">
-    @foreach($viewPost as $post)
+    @foreach($showBlogs as $post)
     <div class="col-sm-6 col-md-3 mt-3">
         <div class="card" style="padding: 10px;">
             <div class="card-block">
@@ -52,6 +52,12 @@
         </div>
     </div>
     @endforeach
+
+     @elseif(isset($message))
+         <p>{{ $message }}</p>
+         @endif
+
+
         </div>
 
 </div>

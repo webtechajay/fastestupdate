@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Blog;
 use DB;
 use App\Contact;
+use Illuminate\Support\Facades\Input;
 
 class BlogController extends Controller
 {
@@ -51,5 +52,20 @@ class BlogController extends Controller
         $storeContact->save();
 
         return redirect('/contact');
+    }
+
+    public function searchBlogs()
+    {
+        $q = Input::get ( 'q' );
+        // dd($q);
+        if($q != ""){
+            $showBlogs = Blog::where ( 'title','LIKE', '%' . $q . '%' )->get();
+            // dd($showMovies);
+            if (count ( $showBlogs ) > 0)
+                return view ( 'frontend.layouts.search_blogs',compact('showBlogs') )->withDetails ( $showBlogs )->withQuery ( $q );
+            else
+                return view ( 'frontend.layouts.search_blogs' )->withMessage ( 'No Details found. Try to search again !' );
+        }
+        return view ( 'frontend.layouts.search_blogs' )->withMessage ( 'No Details found. Try to search again !' );
     }
 }

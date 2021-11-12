@@ -3,7 +3,7 @@
     <!-- Brand Logo -->
     <a href="{{url('admin/dashboard')}}" class="brand-link">
       <img src="{{asset('backend/assets/dist/img/AdminLTELogo.png')}}" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
-      <span class="brand-text font-weight-light">FastestUpdate</span>
+      <span class="brand-text font-weight-light">FastestUpdates</span>
     </a>
 
     <!-- Sidebar -->

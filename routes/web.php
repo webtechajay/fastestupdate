@@ -21,6 +21,7 @@ Route::get('show/post/{id}','BlogController@showPost')->name('post.show');
 Route::get('/about','BlogController@about');
 Route::get('/contact','BlogController@contact');
 Route::post('store/contact','BlogController@storeContact');
+Route::post('search/blogs','BlogController@searchBlogs');
 
 
 

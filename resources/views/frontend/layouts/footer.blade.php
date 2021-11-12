@@ -27,6 +27,14 @@
                                     </span>
                                 </a>
                             </li>
+                            <li class="list-inline-item">
+                                <a href="#!">
+                                    <span class="fa-stack fa-lg">
+                                        <i class="fas fa-circle fa-stack-2x"></i>
+                                        <i class="fab fa-youtube fa-stack-1x fa-inverse"></i>
+                                    </span>
+                                </a>
+                            </li>
                         </ul>
                         <div class="small text-center text-muted fst-italic">Copyright &copy; Your Website 2021</div>
                     </div>
